@@ -17,5 +17,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('paypal',['as'=>'pay','uses'=>'PaypalController@payment']);
 
     Route::get('payment/status', ['as' => 'payment.status', 'uses' => 'PaypalController@getPaymentStatus']);
+
+    Route::get('ebaystore/{ebay}',['as'=>'product.details','uses'=>'EbayController@productDetail']);
+    Route::post('ebaystore',['as'=>'add.product','uses'=>'EbayController@addToStore']);
     
 });

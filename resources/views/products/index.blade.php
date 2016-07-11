@@ -13,6 +13,11 @@
                             <p>{{ $product->description }}</p>
                             <p>
                                 <b class="pull-left"> $ {{ $product->price }}</b>
+                                <a href=" {{ route('product.details',$product->id) }}">
+                                    <button class="btn btn-success pull-right" style="padding:2px 3px;">
+                                        Store To Ebay
+                                    </button>
+                                </a>
                                 <a href="{{ route('product.order',$product->id) }}">
                                     <button class="btn btn-primary pull-right" style="padding:2px 3px;">
                                         Buy This
